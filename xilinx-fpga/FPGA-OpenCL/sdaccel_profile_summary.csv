@@ -1,0 +1,82 @@
+SDAccel Profile Summary
+Generated on: 2018-12-13 17:16:06
+Profiled application: kernel_global_bandwidth
+Target platform: Xilinx
+Target devices: xilinx:adm-pcie-7v3:1ddr:3.0-0
+Flow mode: System Run
+Tool version: 2016.1
+
+OpenCL API Calls
+API Name,Number Of Calls,Total Time (ms),Minimum Time (ms),Average Time (ms),Maximum Time (ms),
+clCreateProgramWithBinary,1,1929.7,1929.7,1929.7,1929.7,
+clCreateContext,1,1575.01,1575.01,1575.01,1575.01,
+clFinish,4,943.45,0.000948,235.862,642.518,
+clReleaseMemObject,2,1.82904,0.001828,0.914518,1.82721,
+clGetPlatformIDs,2,0.497127,0.005171,0.248564,0.491956,
+clReleaseProgram,1,0.138927,0.138927,0.138927,0.138927,
+clEnqueueNDRangeKernel,1,0.048778,0.048778,0.048778,0.048778,
+clEnqueueMapBuffer,2,0.029313,0.006212,0.0146565,0.023101,
+clEnqueueUnmapMemObject,1,0.011579,0.011579,0.011579,0.011579,
+clGetPlatformInfo,2,0.011095,0.00213,0.0055475,0.008965,
+clCreateBuffer,2,0.010425,0.001357,0.0052125,0.009068,
+clGetDeviceInfo,1,0.007146,0.007146,0.007146,0.007146,
+clGetEventProfilingInfo,2,0.006269,0.000311,0.0031345,0.005958,
+clCreateKernel,1,0.004821,0.004821,0.004821,0.004821,
+clReleaseCommandQueue,1,0.00419,0.00419,0.00419,0.00419,
+clSetKernelArg,3,0.003972,0.000396,0.001324,0.002908,
+clReleaseKernel,1,0.003308,0.003308,0.003308,0.003308,
+clCreateCommandQueue,1,0.00298,0.00298,0.00298,0.00298,
+clGetDeviceIDs,1,0.002891,0.002891,0.002891,0.002891,
+clBuildProgram,1,0.00229,0.00229,0.00229,0.00229,
+clReleaseContext,2,0.001279,0.000551,0.0006395,0.000728,
+clRetainContext,1,0.0006,0.0006,0.0006,0.0006,
+
+
+Kernel Execution
+Kernel,Number Of Enqueues,Total Time (ms),Minimum Time (ms),Average Time (ms),Maximum Time (ms),
+bandwidth,1,236.325,236.325,236.325,236.325,
+
+
+Compute Unit Utilization
+Device,Compute Unit,Kernel,Global Work Size,Local Work Size,Number Of Calls,Total Time (ms),Minimum Time (ms),Average Time (ms),Maximum Time (ms),
+xilinx:adm-pcie-7v3:1ddr:3.0-0,bandwidth_1,bandwidth,1:1:1,1:1:1,1,236.311,236.311,236.311,236.311,
+
+
+Data Transfer: Host and Global Memory
+Context:Number of Devices,Transfer Type,Number Of Transfers,Transfer Rate (MB/s),Average Bandwidth Utilization (%),Average Size (KB),Total Time (ms),Average Time (ms),
+context0:1,READ,1,3569.048262,71.380965,1.07374e+06,300.848222,300.848222,
+context0:1,WRITE,1,7491.181110,100.000000,2.14748e+06,286.668232,286.668232,
+
+
+Data Transfer: Kernels and Global Memory
+Device,Transfer Type,Number Of Transfers,Transfer Rate (MB/s),Average Bandwidth Utilization (%),Average Size (KB),Average Time (ns),
+xilinx:adm-pcie-7v3:1ddr:3.0-0,READ,1048576,4543.51,47.3282,1.024,3473.18,
+xilinx:adm-pcie-7v3:1ddr:3.0-0,WRITE,1048576,4543.51,47.3282,1.024,2818.42,
+
+
+Top Data Transfer: Kernels and Global Memory
+Device,Kernel Name,Number of Transfers,Average Bytes per Transfer,Transfer Efficiency (%),Total Data Transfer (MB),Total Write (MB),Total Read (MB),Transfer Rate (MB/s),Average Bandwidth Utilization (%),
+xilinx:adm-pcie-7v3:1ddr:3.0-0,ALL,2097152,1024,25,2147.48,1073.74,1073.74,4543.51,47.3282,
+
+
+Top Kernel Execution
+Kernel Instance Address,Kernel,Context ID,Command Queue ID,Device Name,Start Time (ms),Duration (ms),Global Work Size,Local Work Size,
+33639872,bandwidth,0,0,xilinx:adm-pcie-7v3:1ddr:3.0-0,7391.12,236.325,1:1:1,1:1:1,
+
+
+Top Buffer Writes
+Buffer Address,Context ID,Command Queue ID,Start Time (ms),Duration (ms),Buffer Size (KB),Writing Rate(MB/s),
+33623360,0,0,6984.9,0.006439,1.07374e+06,1.66756e+08,
+
+
+Top Buffer Reads
+Buffer Address,Context ID,Command Queue ID,Start Time (ms),Duration (ms),Buffer Size (KB),Reading Rate(MB/s),
+33623792,0,0,7627.47,300.848,1.07374e+06,3569.05,
+
+
+PRC Parameters
+Parameter,Element,Value,
+DEVICE_EXEC_TIME,xilinx:adm-pcie-7v3:1ddr:3.0-0,236.324512,
+CU_CALLS,xilinx:adm-pcie-7v3:1ddr:3.0-0|bandwidth_1,1,
+
+
